@@ -14,13 +14,7 @@ const {setMLmodelfromdb, getMLoption} = require('./MLoptionselector.js')
 
 const port = process.env.PORT || 5000;
 
-io = new Server(server, {
-    cors:{
-      origin:"http://localhost:5000",
-      method: ["GET","POST"],
-    }
-  });
-  
+
 
 app.use('/api/v1/',router);
 app.use(express.static(__dirname + '/build'))
