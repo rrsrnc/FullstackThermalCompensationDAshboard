@@ -15,9 +15,9 @@ const {setMLmodelfromdb, getMLoption} = require('./MLoptionselector.js')
 const port = process.env.PORT || 5000;
 
 app.use('/api/v1/',router);
-app.use(express.static('./build'))
+app.use(express.static(__dirname + '/build'))
 app.get("/*", (req, res) => {
-    res.sendFile('E:/Fullstack9May/build/index.html');
+    res.sendFile(__dirname + '/build/index.html');
   });
 
 const start = async ()=> {
