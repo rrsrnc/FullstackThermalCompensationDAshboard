@@ -9,7 +9,7 @@ app.use(cors());
 
 const io = new Server(server, {
     cors:{
-        origin:"https://thermalcomepensationdashboard.onrender.com",
+        origin:"http://localhost:3000",
         method: ["GET","POST"],
     }
 });
