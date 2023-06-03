@@ -9,7 +9,7 @@ app.use(cors());
 
 const io = new Server(server, {
     cors:{
-        origin:"http://localhost:3000",
+        origin:"http://3.222.121.208",
         method: ["GET","POST"],
     }
 });
