@@ -5,11 +5,15 @@ const server = http.createServer(app);
 const cors = require('cors');
 const {updateMLoptionindb, setMLoption} = require('./MLoptionselector.js')
 
+
+
 app.use(cors());
 
 const io = new Server(server, {
     cors:{
-        origin:"http://3.222.121.208",
+        // origin:"http://3.222.121.208",
+        origin:"http://localhost:3000",
+
         method: ["GET","POST"],
     }
 });

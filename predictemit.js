@@ -20,7 +20,8 @@ const PredictEmit = (temp1, temp2, temp3)=> {
         let mytime= (today.getHours())+":"+(today.getMinutes())+":"+(today.getSeconds());
         let td_data = {username:'user1',deflection: mypredict, MLmodel:modelname, temp1, temp2, temp3, date: mydate, time : mytime};
         // console.log(td_data);
-        io.sockets.emit('deflection_data', td_data);
+            io.sockets.emit('deflection_data', td_data);
+        
         try{
             let sentdata = await tempdef.create(td_data);
             console.log(`data sent successfully : ${td_data}`);
