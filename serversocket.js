@@ -22,9 +22,8 @@ const io = new Server(server, {
         // origin:"http://localhost:3000",
         origin:"https://rrsrnc.github.io",
         method: ["GET","POST"],
-        headers: {
-            "Access-Control-Allow-Origin": "https://rrsrnc.github.io"
-          }
+        allowedHeaders: ["https://rrsrnc.github.io"],
+        credentials: true
     },
     path:"/socket.io",
    
