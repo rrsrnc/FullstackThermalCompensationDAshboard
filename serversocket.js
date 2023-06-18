@@ -22,7 +22,7 @@ const io = new Server(server, {
         // origin:"http://localhost:3000",
         origin:"https://rrsrnc.github.io",
         method: ["GET","POST"],
-        allowedHeaders: ["https://rrsrnc.github.io"],
+        allowedHeaders: ["my-custom-header"],
         credentials: true
     },
     path:"/socket.io",
@@ -30,6 +30,7 @@ const io = new Server(server, {
 });
 
 io.on('connection', (socket) => {
+    socket.handshake.headers.origin = 'https://rrsrnc.github.io';
     console.log(`User connected : ${socket.id}`);
     socket.on("model_data", (modelname)=> {
         updateMLoptionindb(modelname);
