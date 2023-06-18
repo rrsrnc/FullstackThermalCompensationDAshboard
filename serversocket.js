@@ -14,8 +14,10 @@ const io = new Server(server, {
         // origin:"http://3.222.121.208",
         // origin:"http://localhost:3000",
         origin:"https://rrsrnc.github.io",
-
         method: ["GET","POST"],
+        headers: {
+            "Access-Control-Allow-Origin": "https://rrsrnc.github.io"
+          }
     }
    
 });

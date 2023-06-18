@@ -17,10 +17,10 @@ const port = process.env.PORT || 5000;
 
 
 app.use('/api/v1/',router);
-app.use(express.static(__dirname + '/build'))
-app.get("/*", (req, res) => {
-    res.sendFile(__dirname + '/build/index.html');
-  });
+// app.use(express.static(__dirname + '/build'))
+// app.get("/*", (req, res) => {
+//     res.sendFile(__dirname + '/build/index.html');
+//   });
 
 const start = async ()=> {
     try{
