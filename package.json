@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "accepts": "^1.3.8",
     "array-flatten": "^1.1.1",
@@ -101,6 +104,6 @@
     "start": "nodemon index.js",
     "buildCommand": "pip install -r requirements.txt"
   },
-  "author": "Sumant",
+  "author": "Rajeev",
   "license": "ISC"
 }
