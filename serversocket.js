@@ -20,7 +20,7 @@ const io = new Server(server, {
     cors:{
         // origin:"http://3.222.121.208",
         // origin:"http://localhost:3000",
-        origin:"https://rrsrnc.github.io",
+        // origin:"https://rrsrnc.github.io",
         method: ["GET","POST"],
         allowedHeaders: ["my-custom-header"],
         credentials: true
