@@ -8,7 +8,7 @@ const {getMLoption} = require('./MLoptionselector.js')
 const PredictEmit = (temp1, temp2, temp3)=> {
     const spawn = childprocess.spawn;
     let modelname = getMLoption();
-    console.log(modelname);
+//     console.log(modelname);
     const process = spawn('python', ['./temp.py',temp1,temp2,temp3,modelname]);
     let mypredict;
     process.stdout.on('data', async (data)=> {
@@ -24,7 +24,7 @@ const PredictEmit = (temp1, temp2, temp3)=> {
         
         try{
             let sentdata = await tempdef.create(td_data);
-            console.log(`data sent successfully : ${td_data}`);
+//             console.log(`data sent successfully : ${td_data}`);
         } catch{
             console.log('Unable to send data to database');
         }
